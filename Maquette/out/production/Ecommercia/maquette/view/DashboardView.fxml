@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="800" prefWidth="1200" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/21.0.5" fx:controller="maquette.controller.DashboardController"
+            stylesheets="/resources/styles/dashboard.css">
+
+    <!-- Sidebar (Left) -->
+    <left>
+        <VBox id="sidebar">
+            <!-- Logo -->
+            <ImageView fx:id="logoImageView" fitHeight="120" fitWidth="120">
+                <image>
+                    <Image url="@/resources/images/icon.png"/>
+                </image>
+            </ImageView>
+
+            <Text id="app-title" text="Gestion des Spectacles" style="
+            -fx-font-size: 15px;
+            -fx-font-weight: bold;
+            -fx-fill: black;"/>
+
+
+            <VBox style="-fx-alignment: TOP_CENTER;">
+                <Text id="app-title" text="Elaboré par:"
+                      style="-fx-font-weight: bold;
+                            -fx-font-size: 12px;
+                            -fx-fill: #3A4F63;"/>
+
+                <Text id="app-title" text="Jasser Gorsia" style="
+            -fx-font-size: 12px;
+             -fx-fill: #3A4F63;"/>
+                <Text id="app-title" text="Nidhal Chelhi" style="
+            -fx-font-size: 12px;
+             -fx-fill: #3A4F63;"/>
+            </VBox>
+
+
+            <!-- Navigation Tiles -->
+            <VBox id="nav-item" onMouseClicked="#showLieuxPage">
+                <ImageView fitHeight="32" fitWidth="32">
+                    <image>
+                        <Image url="@/resources/images/icons/land-layer-location.png"/>
+                    </image>
+                </ImageView>
+                <Text text="Gestion des lieux"/>
+            </VBox>
+
+            <VBox id="nav-item" onMouseClicked="#showSpectaclesPage">
+                <ImageView fitHeight="32" fitWidth="32">
+                    <image>
+                        <Image url="@/resources/images/icons/stage-theatre.png"/>
+                    </image>
+                </ImageView>
+                <Text text="Gestion des spectacles"/>
+            </VBox>
+
+            <VBox id="nav-item" onMouseClicked="#showRubriquesPage">
+                <ImageView fitHeight="32" fitWidth="32">
+                    <image>
+                        <Image url="@/resources/images/icons/stage.png"/>
+                    </image>
+                </ImageView>
+                <Text text="Gestion des rubriques"/>
+            </VBox>
+
+            <VBox id="nav-item" onMouseClicked="#showArtistsPage">
+                <ImageView fitHeight="32" fitWidth="32">
+                    <image>
+                        <Image url="@/resources/images/icons/users.png"/>
+                    </image>
+                </ImageView>
+                <Text text="Gestion des artistes"/>
+            </VBox>
+
+            <VBox id="nav-item" onMouseClicked="#showBilletsPage">
+                <ImageView fitHeight="32" fitWidth="32">
+                    <image>
+                        <Image url="@/resources/images/icons/tickets.png"/>
+                    </image>
+                </ImageView>
+                <Text text="Gestion des billets"/>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Main Content Area (Center) -->
+    <center>
+        <AnchorPane fx:id="contentArea" id="main-content"/>
+    </center>
+</BorderPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/21.0.5"
+            fx:controller="maquette.controller.SpectaclesController"
+           >
+    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+        <Label text="Gestion des Spectacles" id="page-title"/>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="searchField" promptText="Rechercher un spectacle..." id="search-field"/>
+            <Button fx:id="searchButton" text="Rechercher" id="search-button">
+            </Button>
+        </HBox>
+
+        <ScrollPane fitToWidth="true" fitToHeight="true" id="table-scrollpane">
+            <TableView fx:id="spectaclesTable" prefHeight="400">
+                <columns>
+                    <TableColumn text="Titre" fx:id="titleColumn" prefWidth="150"/>
+                    <TableColumn text="Date" fx:id="dateColumn" prefWidth="120"/>
+                    <TableColumn text="Heure" fx:id="timeColumn" prefWidth="100"/>
+                    <TableColumn text="Durée" fx:id="durationColumn" prefWidth="100"/>
+                    <TableColumn text="Nombre de Spectateurs" fx:id="spectatorsColumn" prefWidth="180"/>
+                    <TableColumn text="Lieu" fx:id="venueColumn" prefWidth="150"/>
+                </columns>
+                <placeholder>
+                    <Label text="Aucun spectacle disponible" id="table-placeholder"/>
+                </placeholder>
+            </TableView>
+        </ScrollPane>
+
+        <HBox spacing="10" alignment="CENTER_LEFT" id="action-buttons">
+            <Button text="Ajouter" onAction="#handleAddSpectacle" id="add-button">
+            </Button>
+            <Button text="Modifier" onAction="#handleEditSpectacle" id="edit-button">
+            </Button>
+            <Button text="Supprimer" onAction="#handleDeleteSpectacle" id="delete-button">
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

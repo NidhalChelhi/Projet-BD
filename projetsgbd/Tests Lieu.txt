@@ -1,0 +1,33 @@
+-- Adding a new venue (e.g., 'Théâtre de Carthage')
+
+BEGIN
+    pkg_lieu.add_lieu('Théâtre de Carthage', 'Avenue Habib Bourguiba, Carthage, Tunis', 1200);
+END;
+
+
+
+
+-- Updating an existing venue (e.g., changing the name and capacity of venue with ID 1)
+
+BEGIN
+    pkg_lieu.update_lieu(1, 'Théâtre Municipal de Tunis', 1500);
+END;
+
+
+
+-- Deleting a venue (replace 5 with an actual venue ID with no associated spectacles)
+
+BEGIN
+    pkg_lieu.delete_lieu(5); -- Example: Deleting venue with ID 5
+END;
+
+
+
+-- Attempting to delete a venue with associated spectacles (replace 3 with an actual venue ID with spectacles)
+
+BEGIN
+    pkg_lieu.delete_lieu(3); -- Example: Deleting venue with ID 3, assuming it has associated spectacles
+END;
+
+
+

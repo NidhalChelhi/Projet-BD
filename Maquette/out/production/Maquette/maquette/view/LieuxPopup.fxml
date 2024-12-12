@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/21.0.5"
+
+            fx:controller="maquette.controller.LieuxPopupController"
+>
+    <children>
+        <VBox spacing="20" alignment="CENTER" prefWidth="600" prefHeight="500" AnchorPane.topAnchor="20"
+              AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+            <Label text="Ajouter un lieu" id="page-title"/>
+
+            <!-- Form Section -->
+            <VBox spacing="15" alignment="CENTER" id="form-section">
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Nom:" id="form-label"/>
+                    <TextField fx:id="nameField" promptText="Entrez le nom du lieu" id="form-input"/>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Capacité:" id="form-label"/>
+                    <TextField fx:id="capacityField" promptText="Entrez la capacité" id="form-input"/>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Adresse:" id="form-label"/>
+                    <TextField fx:id="addressField" promptText="Entrez l'adresse" id="form-input"/>
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Ville:" id="form-label"/>
+                    <TextField fx:id="cityField" promptText="Entrez la ville" id="form-input"/>
+                </VBox>
+            </VBox>
+
+            <!-- Action Buttons -->
+            <HBox spacing="20" alignment="CENTER" id="action-buttons">
+                <Button text="Ajouter" fx:id="addButton" id="primary-button"/>
+                <Button text="Annuler" fx:id="cancelButton" id="secondary-button"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

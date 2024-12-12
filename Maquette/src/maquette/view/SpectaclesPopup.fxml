@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/21.0.5"
+            fx:controller="maquette.controller.SpectaclesPopupController"
+            >
+    <VBox spacing="20" alignment="CENTER" prefWidth="600" prefHeight="500" AnchorPane.topAnchor="20"
+          AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+        <Label text="Ajouter un Spectacle" id="page-title"/>
+
+        <!-- Form Section -->
+        <VBox spacing="15" alignment="CENTER" id="form-section">
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Titre:" id="form-label"/>
+                <TextField fx:id="titleField" promptText="Entrez le titre du spectacle" id="form-input"/>
+            </VBox>
+
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Date:" id="form-label"/>
+                <DatePicker fx:id="datePicker" promptText="Sélectionnez la date" id="form-input"/>
+            </VBox>
+
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Heure de Début:" id="form-label"/>
+                <ComboBox fx:id="timePicker" promptText="Sélectionnez l'heure" id="form-input">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="08:00"/>
+                            <String fx:value="09:00"/>
+                            <String fx:value="10:00"/>
+                            <String fx:value="11:00"/>
+                            <String fx:value="12:00"/>
+                            <String fx:value="13:00"/>
+                            <String fx:value="14:00"/>
+                            <String fx:value="15:00"/>
+                            <String fx:value="16:00"/>
+                            <String fx:value="17:00"/>
+                            <String fx:value="18:00"/>
+                            <String fx:value="19:00"/>
+                            <String fx:value="20:00"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Durée:" id="form-label"/>
+                <TextField fx:id="durationField" promptText="Entrez la durée" id="form-input"/>
+            </VBox>
+
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Nombre de Spectateurs:" id="form-label"/>
+                <TextField fx:id="spectatorsField" promptText="Entrez le nombre de spectateurs" id="form-input"/>
+            </VBox>
+
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Lieu:" id="form-label"/>
+                <ComboBox fx:id="venueField" promptText="Sélectionnez le lieu" id="form-input">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Théâtre National"/>
+                            <String fx:value="Salle Polyvalente"/>
+                            <String fx:value="Centre Culturel"/>
+                            <String fx:value="Auditorium Central"/>
+                            <String fx:value="Palais des Congrès"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+        </VBox>
+
+        <!-- Action Buttons -->
+        <HBox spacing="20" alignment="CENTER" id="action-buttons">
+            <Button text="Ajouter" fx:id="addButton" id="primary-button"/>
+            <Button text="Annuler" fx:id="cancelButton" id="secondary-button"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
